@@ -1,0 +1,33 @@
+header.mui-bar{
+	background-color:#FD6266 ;
+}
+header.mui-bar a,header.mui-bar h1{
+	color: #fff;
+}
+
+footer.mui-bar-footer{
+	position: fixed;
+	z-index:10;	
+}
+footer .mui-content{
+	background: #333;
+	height: 51px;
+	padding-top: 8px;
+}
+footer ul{
+	width: 100%;
+	display: table;
+}
+footer li{
+	width: 1%;
+	display: table-cell;
+	text-align: center;
+}
+footer li#beauty{ 
+	width: 2%; 
+}
+footer li a{
+	color: #fff;
+	font-size: 12px;;
+}
+footer li i.mui-icon{font-size: 16px; display: block !important;}

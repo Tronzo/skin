@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>美荼</title>
+		<link href="css/common/reset.css" rel="stylesheet" />
+		<link href="css/common/public_hf.css" rel="stylesheet" />
+		<link href="css/index.css" rel="stylesheet" />
+		<link href="css/mui.min.css" rel="stylesheet" />		
+	</head>
+	<body>
+		<!-- 侧滑导航根容器 -->
+		<div class="mui-off-canvas-wrap mui-draggable">
+		  <!-- 主页面容器 -->
+		  <div class="mui-inner-wrap">
+		     <!-- 菜单容器 -->
+		    <aside class="mui-off-canvas-left">
+		      <div class="mui-scroll-wrapper">
+		        <div class="mui-scroll" >
+						<!--<div class="title">侧滑导航</div>
+						<div class="content">
+							这是可拖动式侧滑菜单示例，你可以在这里放置任何内容；关闭侧滑菜单有多种方式： 1.在手机屏幕任意位置向左拖动(drag)；2.点击本侧滑菜单页之外的任意位置; 3.点击如下红色按钮
+							<span class="android-only" style="display: none;">；4.Android手机按back键；5.Android手机按menu键
+							</span>。
+							<p style="margin: 10px 15px;">
+								<button id="offCanvasHide" type="button" class="mui-btn mui-btn-danger mui-btn-block" style="padding: 5px 20px;">关闭侧滑菜单</button>
+							</p>
+
+						</div>-->
+						<div class="title" style="margin-bottom: 25px;">侧滑列表示例</div>
+						<ul class="mui-table-view mui-table-view-chevron mui-table-view-inverted">
+							<li class="mui-table-view-cell">
+								<a class="mui-navigate-right">
+									我的化妆提醒
+								</a>
+							</li>
+							<li class="mui-table-view-cell">
+								<a class="mui-navigate-right">
+									妆品大收集
+								</a>
+							</li>
+							<li class="mui-table-view-cell">
+								<a class="mui-navigate-right">
+									个人中心
+								</a>
+							</li>
+
+						</ul>
+					</div>
+		      </div>
+		    </aside>
+		    <!-- 主页面标题 -->
+		    <header class="mui-bar mui-bar-nav">
+		      <a class="mui-icon mui-action-menu mui-icon-bars mui-pull-left"></a>
+		      <h1 class="mui-title">美荼</h1>
+		    </header>
+		    <!-- 主页面内容容器 -->
+		    <div class="mui-content mui-scroll-wrapper"  id="scroll" >
+		      <div class="mui-scroll">
+		        <!-- 主界面具体展示内容 -->
+		        <div class="mainbody">		        	
+		        	<img src="assets/images/banner.jpg" alt="" style="max-width:100%" />
+		        </div>
+		      </div>
+		    </div>
+			<footer class="mui-bar-footer">
+				<div class="mui-content">
+				    <ul>
+			    		<li id="home">
+			    			<a href="javascript:void(0)" >
+			    				<i class="mui-icon mui-icon-home"></i>
+			    				首页
+			    			</a>
+			    		</li>
+			    		<li id="calendar">
+			    			<a href="javascript:void(0)" > 
+			    				<i class="mui-icon mui-icon-bars"></i>
+			    				日历
+			    			</a>
+			    		</li>
+			    		<li id="beauty">
+			    			<a href="javascript:void(0)" >
+			    				<i class="mui-icon mui-icon-flag"></i>
+			    				美月优惠
+			    			</a>
+			    		</li>
+			    		<li id="sister">
+			    			<a href="javascript:void(0)" >
+			    				<i class="mui-icon mui-icon-chat"></i>
+			    				姐妹说
+			    			</a>
+			    		</li>
+			    		<li id="user">
+			    			<a href="javascript:void(0)" >
+			    				<i class="mui-icon mui-icon-contact"></i>
+			    				我
+			    			</a>
+			    		</li>
+			    	</ul>				    
+				</div>		    	
+		    </footer>
+		    
+		  </div>
+		</div>
+		
+		<script src="js/mui.min.js" ></script>
+		<script src="js/app.js" ></script>
+		<script type="text/javascript">
+//			mui('.mui-off-canvas-wrap').offCanvas('close');
+			mui(".mui-bar-nav").on("tap",".mui-action-menu",function(){
+				mui('.mui-off-canvas-wrap').offCanvas('show');
+			})
+
+			mui('#scroll').scroll();
+			
+			document.getElementById("user").addEventListener("tap",function(){
+				mui.openWindow({
+					url:'login.html',
+					id:'user'
+				})
+			})
+			
+			document.getElementById("home").addEventListener("tap",function(){
+				mui.openWindow({
+					url:'index.html',
+					id:'home'
+				})
+			})
+			
+			document.getElementById("calendar").addEventListener("tap",function(){
+				mui.openWindow({
+					url:'calendar.html',
+					id:'home'
+				})
+			})
+		</script>
+	</body>
+</html>
