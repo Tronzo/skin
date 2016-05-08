@@ -2,3 +2,4 @@
 body{ min-width: 320px; }
 ul,li{ list-style: none; }
 a{ text-decoration: none; }
+img.imgdb{display: block;width: 100%;}
